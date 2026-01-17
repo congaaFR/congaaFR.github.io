@@ -21,7 +21,7 @@ header {
     background: linear-gradient(180deg, #1e1e1e 0%, #121212 100%);
     border-bottom: 1px solid #333;
 }
-header h1 { font-size: 2.5rem; color: #fff; letter-spacing: -1px; margin-bottom: 5px; }
+header h1 { font-size: 2.5rem; color: #fff; letter-spacing: -1px; margin-bottom: 5px; text-transform: uppercase; }
 header h2 { font-size: 1.2rem; color: #4db8ff; font-weight: 400; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
 
 .social-links a {
@@ -42,7 +42,7 @@ header h2 { font-size: 1.2rem; color: #4db8ff; font-weight: 400; margin-bottom: 
 
 .about-grid {
     display: grid;
-    grid-template-columns: 300px 1fr; /* Photo à gauche, texte à droite */
+    grid-template-columns: 300px 1fr; /* Photo à gauche (300px), texte à droite (le reste) */
     gap: 50px;
     align-items: start;
 }
@@ -54,7 +54,7 @@ header h2 { font-size: 1.2rem; color: #4db8ff; font-weight: 400; margin-bottom: 
     width: 200px;
     height: 200px;
     object-fit: cover;
-    border-radius: 50%; /* Rend l'image ronde */
+    border-radius: 50%; /* Image ronde */
     border: 4px solid #333;
     margin-bottom: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
@@ -95,12 +95,13 @@ header h2 { font-size: 1.2rem; color: #4db8ff; font-weight: 400; margin-bottom: 
 }
 .card:hover { transform: translateY(-5px); border-color: #555; }
 
-/* IMAGES PROJETS */
+/* IMAGES PROJETS (Configuration pour les voir !) */
 .card-img {
     width: 100%;
     height: 180px;
     object-fit: cover;
     border-bottom: 1px solid #333;
+    display: block; /* Force l'affichage */
 }
 
 .card-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
