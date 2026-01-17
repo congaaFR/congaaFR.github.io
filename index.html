@@ -1,25 +1,63 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Data Analyst</title>
+    <title>Lucas Garcia - Marketing Data Analytics Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
         <div class="container">
-            <h1>Lucas Garica</h1>
+            <h1>LUCAS GARCIA</h1>
             <h2>Marketing Data Analytics</h2>
-            <p class="bio">I am a Master's student in Marketing Data Analytics at Montpellier Management, passionate about extracting meaningful insights from data. With a background in sales and technical skills in Python, SQL, and Power BI, I aim to solve concrete marketing challenges. I am currently looking for an internship starting March 2, 2026.</p>
             <div class="social-links">
                 <a href="https://github.com/congaaFR" target="_blank">GitHub</a>
                 <a href="https://www.linkedin.com/in/lucas-garcia-5aa4bb224/" target="_blank">LinkedIn</a>
+                <a href="mailto:tonemail@gmail.com">Contact</a>
             </div>
         </div>
     </header>
+
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="profile-col">
+                    <img src="profile.png" alt="Lucas Garcia" class="profile-pic">
+                    <a href="#" class="btn download-btn">Download Resume (PDF)</a>
+                </div>
+                
+                <div class="resume-col">
+                    <h2 class="section-title" style="text-align: left;">About Me</h2>
+                    <p class="bio-text">
+                        I am a Master's student in Marketing Data Analytics at Montpellier Management, passionate about extracting meaningful insights from data. With a background in sales and technical skills in Python, SQL, and Power BI, I aim to solve concrete marketing challenges. 
+                        <br><br>
+                        <strong>Currently looking for an internship starting March 2, 2026.</strong>
+                    </p>
+
+                    <div class="resume-section">
+                        <h3>🛠 Technical Skills</h3>
+                        <div class="skills-list">
+                            <span>Python (Pandas, Scikit-Learn)</span>
+                            <span>SQL (MySQL)</span>
+                            <span>Power BI / Tableau</span>
+                            <span>Machine Learning</span>
+                            <span>ETL Pipelines</span>
+                            <span>Marketing Analytics</span>
+                        </div>
+                    </div>
+
+                    <div class="resume-section">
+                        <h3>🎓 Education</h3>
+                        <p><strong>Master in Marketing Data Analytics</strong><br>
+                        Montpellier Management - <em>2024 - 2026 (Expected)</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="projects">
         <div class="container">
@@ -27,35 +65,32 @@
             <div class="grid">
 
                 <div class="card">
-                    <div class="card-header lol-bg"></div>
+                    <img src="lol.png" alt="LoL Data Analysis" class="card-img">
                     <div class="card-body">
                         <h3>LoL Data Pipeline: ETL & Analysis</h3>
-        
                         <p>Extracted 700+ matches using Python and Riot API to create a dataset. Used SQL queries to analyze Key Performance Indicators (KPIs) such as Win Rate by Champion, Gold efficiency, and Early/Late game performance.</p>
-                        <p class="insight"><strong>Insight:</strong> "Analysis of the data revealed a 15% higher Win Rate during morning sessions compared to late-night games, confirming the impact of fatigue on performance.</p>
+                        <p class="insight"><strong>Insight:</strong> Analysis revealed a 15% higher Win Rate during morning sessions compared to late-night games.</p>
                         <a href="https://github.com/congaaFR/Data-Portfolio/tree/main/League-of-Legends" class="btn" target="_blank">Github Link</a>
                     </div>
                 </div>
 
                 <div class="card">
-                    <div class="card-header spotify-bg"></div>
+                    <img src="spotify.png" alt="Spotify Analysis" class="card-img">
                     <div class="card-body">
                         <h3>Spotify Data Pipeline: ETL & Cleaning</h3>
-                      
-                        <p>Built a Python ETL pipeline to process a raw music dataset containing encoding errors and special characters. Used Pandas to clean text anomalies and standardize data formats before loading into MySQL</p>
-                        <p class="insight"><strong>Insight:</strong> My SQL analysis identified Taylor Swift as the #1 artist on Spotify, significantly outperforming TikTok-viral trends in terms of total streams.</p>
+                        <p>Built a Python ETL pipeline to process a raw music dataset containing encoding errors. Used Pandas to clean text anomalies and standardize data formats before loading into MySQL.</p>
+                        <p class="insight"><strong>Insight:</strong> SQL analysis identified Taylor Swift as the #1 artist, significantly outperforming viral trends in total streams.</p>
                         <a href="https://github.com/congaaFR/Data-Portfolio/tree/main/Spotify-Project" class="btn" target="_blank">Github Link</a>
                     </div>
                 </div>
 
                 <div class="card">
-                    <div class="card-header sales-bg"></div>
+                    <img src="sales.png" alt="Sales Forecast" class="card-img">
                     <div class="card-body">
                         <h3>E-commerce Sales Forecasting (ML)</h3>
-                        
-                        <p>Analyzed the famous 'Superstore' dataset (real-world retail data). Built a Python pipeline to aggregate daily transactions into monthly trends and trained a Random Forest model to forecast future revenue. Used SQL to identify top-performing product categories and high-value customers.</p>
+                        <p>Analyzed the 'Superstore' dataset (real-world retail data). Built a Python pipeline to aggregate monthly trends and trained a Random Forest model to forecast future revenue.</p>
                         <p class="insight"><strong>Insight:</strong> Real data analysis showed strong seasonality, with Technology products driving 40% of total revenue during Q4.</p>
-                        <a href="https://github.com/congaaFR/Data-Portfolio/tree/main/Sales-Forecasting" class="btn" target="_blank">Voir le Code</a>
+                        <a href="https://github.com/congaaFR/Data-Portfolio/tree/main/Sales-Forecasting" class="btn" target="_blank">Github Link</a>
                     </div>
                 </div>
 
@@ -64,7 +99,7 @@
     </section>
 
     <footer>
-        <p>© 2026 - Construit avec HTML & CSS (Hébergé sur GitHub Pages)</p>
+        <p>© 2026 Lucas Garcia - Hosted on GitHub Pages</p>
     </footer>
 
 </body>
