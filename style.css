@@ -1,106 +1,146 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas Garcia - Marketing Data Analytics Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+/* RESET & BASE */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
 
-    <header>
-        <div class="container">
-            <h1>LUCAS GARCIA</h1>
-            <h2>Marketing Data Analytics</h2>
-            <div class="social-links">
-                <a href="https://github.com/congaaFR" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/lucas-garcia-5aa4bb224/" target="_blank">LinkedIn</a>
-                <a href="mailto:tonemail@gmail.com">Contact</a>
-            </div>
-        </div>
-    </header>
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-    <section id="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="profile-col">
-                    <img src="profile.png" alt="Lucas Garcia" class="profile-pic">
-                    <a href="#" class="btn download-btn">Download Resume (PDF)</a>
-                </div>
-                
-                <div class="resume-col">
-                    <h2 class="section-title" style="text-align: left;">About Me</h2>
-                    <p class="bio-text">
-                        I am a Master's student in Marketing Data Analytics at Montpellier Management, passionate about extracting meaningful insights from data. With a background in sales and technical skills in Python, SQL, and Power BI, I aim to solve concrete marketing challenges. 
-                        <br><br>
-                        <strong>Currently looking for an internship starting March 2, 2026.</strong>
-                    </p>
+/* HEADER */
+header {
+    text-align: center;
+    padding: 60px 0 40px;
+    background: linear-gradient(180deg, #1e1e1e 0%, #121212 100%);
+    border-bottom: 1px solid #333;
+}
+header h1 { font-size: 2.5rem; color: #fff; letter-spacing: -1px; margin-bottom: 5px; }
+header h2 { font-size: 1.2rem; color: #4db8ff; font-weight: 400; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
 
-                    <div class="resume-section">
-                        <h3>🛠 Technical Skills</h3>
-                        <div class="skills-list">
-                            <span>Python (Pandas, Scikit-Learn)</span>
-                            <span>SQL (MySQL)</span>
-                            <span>Power BI / Tableau</span>
-                            <span>Machine Learning</span>
-                            <span>ETL Pipelines</span>
-                            <span>Marketing Analytics</span>
-                        </div>
-                    </div>
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #bbb;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+.social-links a:hover { color: #fff; background-color: #4db8ff; border-color: #4db8ff; }
 
-                    <div class="resume-section">
-                        <h3>🎓 Education</h3>
-                        <p><strong>Master in Marketing Data Analytics</strong><br>
-                        Montpellier Management - <em>2024 - 2026 (Expected)</em></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+/* ABOUT & RESUME SECTION */
+#about { padding: 60px 0; border-bottom: 1px solid #333; }
 
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="grid">
+.about-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr; /* Photo à gauche, texte à droite */
+    gap: 50px;
+    align-items: start;
+}
 
-                <div class="card">
-                    <img src="lol.png" alt="LoL Data Analysis" class="card-img">
-                    <div class="card-body">
-                        <h3>LoL Data Pipeline: ETL & Analysis</h3>
-                        <p>Extracted 700+ matches using Python and Riot API to create a dataset. Used SQL queries to analyze Key Performance Indicators (KPIs) such as Win Rate by Champion, Gold efficiency, and Early/Late game performance.</p>
-                        <p class="insight"><strong>Insight:</strong> Analysis revealed a 15% higher Win Rate during morning sessions compared to late-night games.</p>
-                        <a href="https://github.com/congaaFR/Data-Portfolio/tree/main/League-of-Legends" class="btn" target="_blank">Github Link</a>
-                    </div>
-                </div>
+.profile-col { text-align: center; }
 
-                <div class="card">
-                    <img src="spotify.png" alt="Spotify Analysis" class="card-img">
-                    <div class="card-body">
-                        <h3>Spotify Data Pipeline: ETL & Cleaning</h3>
-                        <p>Built a Python ETL pipeline to process a raw music dataset containing encoding errors. Used Pandas to clean text anomalies and standardize data formats before loading into MySQL.</p>
-                        <p class="insight"><strong>Insight:</strong> SQL analysis identified Taylor Swift as the #1 artist, significantly outperforming viral trends in total streams.</p>
-                        <a href="https://github.com/congaaFR/Data-Portfolio/tree/main/Spotify-Project" class="btn" target="_blank">Github Link</a>
-                    </div>
-                </div>
+/* PHOTO DE PROFIL */
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; /* Rend l'image ronde */
+    border: 4px solid #333;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
 
-                <div class="card">
-                    <img src="sales.png" alt="Sales Forecast" class="card-img">
-                    <div class="card-body">
-                        <h3>E-commerce Sales Forecasting (ML)</h3>
-                        <p>Analyzed the 'Superstore' dataset (real-world retail data). Built a Python pipeline to aggregate monthly trends and trained a Random Forest model to forecast future revenue.</p>
-                        <p class="insight"><strong>Insight:</strong> Real data analysis showed strong seasonality, with Technology products driving 40% of total revenue during Q4.</p>
-                        <a href="https://github.com/congaaFR/Data-Portfolio/tree/main/Sales-Forecasting" class="btn" target="_blank">Github Link</a>
-                    </div>
-                </div>
+.resume-col h3 { color: #fff; margin-top: 25px; margin-bottom: 10px; border-bottom: 1px solid #333; padding-bottom: 5px; }
+.bio-text { font-size: 1.05rem; color: #ccc; margin-bottom: 20px; }
 
-            </div>
-        </div>
-    </section>
+/* BADGES COMPETENCES */
+.skills-list { display: flex; flex-wrap: wrap; gap: 10px; }
+.skills-list span {
+    background: #1e1e1e;
+    color: #4db8ff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid #333;
+}
 
-    <footer>
-        <p>© 2026 Lucas Garcia - Hosted on GitHub Pages</p>
-    </footer>
+/* PROJETS SECTION */
+#projects { padding: 60px 0 100px; }
+.section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; color: #fff; }
 
-</body>
-</html>
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #333;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+.card:hover { transform: translateY(-5px); border-color: #555; }
+
+/* IMAGES PROJETS */
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid #333;
+}
+
+.card-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+.card h3 { font-size: 1.3rem; margin-bottom: 10px; color: #fff; }
+.card p { font-size: 0.95rem; color: #ccc; margin-bottom: 15px; }
+
+.insight { 
+    background-color: #252525; 
+    padding: 12px; 
+    border-left: 3px solid #4db8ff; 
+    font-size: 0.9rem; 
+    margin-top: auto; 
+    margin-bottom: 20px;
+    color: #bbb;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.btn:hover { background-color: #4db8ff; color: #000; }
+
+.download-btn { background-color: #4db8ff; color: #000; margin-top: 10px; }
+.download-btn:hover { background-color: #fff; }
+
+/* FOOTER */
+footer { text-align: center; padding: 40px; color: #555; font-size: 0.8rem; border-top: 1px solid #333; }
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+    .about-grid { grid-template-columns: 1fr; text-align: center; }
+    .resume-col h2 { text-align: center !important; }
+    .skills-list { justify-content: center; }
+    header h1 { font-size: 2rem; }
+}
